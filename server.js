@@ -2,7 +2,7 @@ const express = require('express');
 const http = require('http');
 
 const app = express();
-port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
     res.send('this app is awake');
