@@ -1,5 +1,6 @@
 const express = require('express');
 const http = require('http');
+const axios = require('axios');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -9,14 +10,15 @@ app.get('/', (req, res) => {
 });
 
 const awakeServers = () => {
-    http.get("http://expensify-jordan.herokuapp.com/");
-    http.get("http://expensifyserver.herokuapp.com/");
-    http.get("http://blog-jordan.herokuapp.com/");
-    http.get("http://blogserver-jordan.herokuapp.com/");
-    http.get("http://pinger-jordan/");
+    axios.get("http://expensify-jordan.herokuapp.com/")
+    axios.get("http://expensifyserver.herokuapp.com/expense/userid/1")
+    axios.get("http://blog-jordan.herokuapp.com/");
+    axios.get("http://blogserver-jordan.herokuapp.com/blog/10");
+    axios.get("http://pinger-jordan.herokuapp.com/");
+    console.log('ping');
 };
 
-awakeServers();
+// awakeServers();
 
 setInterval(() => {
     awakeServers()
