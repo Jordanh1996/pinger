@@ -16,6 +16,7 @@ const awakeServers = () => {
     axios.get("http://blogserver-jordan.herokuapp.com/blog/10");
     axios.get("http://pinger-jordan.herokuapp.com/");
     axios.get("https://lit-meadow-67581.herokuapp.com/");
+    axios.get("https://idanhazan.herokuapp.com/");
     console.log('ping');
 };
 
